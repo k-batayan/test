@@ -1,18 +1,6 @@
 machine:
   timezone:
     Asia/Tokyo
-  java:
-    version: openjdk7
-  environment:
-    MAVEN_LOCAL_REPO: /home/ubuntu/.m2/repository
-  services:
-    - mysql
 dependencies:
-  override:
-    npm install --production
-  pre: 
-    npm install coffeescript
 test:
-  override:
-    - echo Hellow World:
 deployment:
