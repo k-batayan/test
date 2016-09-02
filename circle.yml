@@ -1,4 +1,5 @@
+// Hello Worldをechoするだけのテスト(?)
 $ cat circle.yml
 test:
   override:
-  - echo Hello World 
+    - echo Hello World
