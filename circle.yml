@@ -8,6 +8,10 @@ machine:
   services:
     - mysql
 dependencies:
+  override:
+    npm install --production
+  pre: 
+    npm install coffeescript
 test:
   override:
     - echo Hellow World:
