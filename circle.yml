@@ -1,5 +1,15 @@
-// Hello Worldをechoするだけのテスト(?)
-$ cat circle.yml
+machine:
+  timezone:
+    Asia/Tokyo
+  java:
+    version: openjdk7
+  environment:
+    MAVEN_LOCAL_REPO: /home/ubuntu/.m2/repository
+  services:
+    - mysql
+dependencies:
 test:
   override:
-    - echo Hello World
+    - mvn verify -DskipITs=false:
+        pwd: komguide2server
+deployment:
