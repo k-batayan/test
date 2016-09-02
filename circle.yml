@@ -10,6 +10,5 @@ machine:
 dependencies:
 test:
   override:
-    - mvn verify -DskipITs=false:
-        pwd: komguide2server
+    - echo Hellow World:
 deployment:
