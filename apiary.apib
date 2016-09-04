@@ -1,0 +1,42 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# customerList
+
+API設計のテスト実装です
+
+## Customer_shoot_wait_list [/{event_day}/shot_list{?user_status}]
+
+撮影待ちの顧客リストを返します。
+
+### List All Shoot wait list [GET]
+
++ Parameters
+
+  + event_day: 20161001 (string, optional) - イベント日付
+  + user_status: 1 (number, optional) - イベント日付
+
++ Response 200 (application/json)
+
+        [
+            {
+                "event_day": "20161001",
+                "customers": [
+                    {
+                        "user_no": 1,
+                        "user_id": "a002800000ijqAfAAI",
+                        "Booth_name": "川畑文樹",
+                        "Booth_kananame": "カワバタフミキ",
+                        "user_status": 1,
+                        "same_name_flag": 0
+                    }, {
+                        "user_no": 2,
+                        "user_id": "a002800000ijpClAAI",
+                        "Booth_name": "山田太郎",
+                        "Booth_kananame": "ヤマダタロウ",
+                        "user_status": 1,
+                        "same_name_flag": 0
+                    }
+                ]
+            }
+        ]
